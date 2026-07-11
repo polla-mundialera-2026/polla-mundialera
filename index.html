@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Polla Mundialera 2026 · Historial</title>
 <meta property="og:title" content="⚽ Polla Mundialera 2026 — Tabla histórica">
-<meta property="og:description" content="246 jugadores · 27 jornadas · evolución de posiciones, puntos y exactos. Busca tu nombre y compárate.">
+<meta property="og:description" content="246 jugadores · 29 jornadas · evolución de posiciones, puntos y exactos. Busca tu nombre y compárate.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0E1B12">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -92,7 +92,7 @@ footer strong{color:var(--tiza)}
 <body>
 <div class="wrap">
 <header>
-  <div class="eyebrow">Mundial 2026 · 11 jun — 10 jul · de grupos a cuartos</div>
+  <div class="eyebrow">Mundial 2026 · 11 jun — 10 jul · actualizado hasta partido de cuartos de final ESP - BEL  (actu</div>
   <h1>Polla <span>Mundialera</span></h1>
   <div class="sub" id="subinfo"></div>
 </header>
@@ -117,7 +117,7 @@ footer strong{color:var(--tiza)}
 <div class="stats" id="stats"></div>
 
 <div class="tablabox">
-  <h2>Tabla final · cierre 6 jul</h2>
+  <h2>Tabla final · cierre 10 jul</h2>
   <input id="tsearch" type="text" placeholder="Filtrar por nombre…">
   <div style="overflow-x:auto"><table>
     <thead><tr><th class="num">Pos</th><th>Jugador</th><th class="num">Pts</th><th class="num">Exactos</th></tr></thead>
@@ -323,8 +323,7 @@ document.getElementById('tbody').addEventListener('click', e=>{
 const estTot = P.reduce((a,p)=>a+p.est.reduce((x,y)=>x+y,0),0);
 document.getElementById('foot').innerHTML = `
   <strong>Notas del procesamiento.</strong> Datos extraídos automáticamente de los pantallazos de WhatsApp de la tabla oficial (${N} jornadas, del 11 de junio al 10 de julio, ${P.length} participantes).
-  Las posiciones salen del orden real de cada tabla. Un ${(100*estTot/(P.length*N*2)).toFixed(1)}% de las celdas de puntos/exactos no se pudo leer con certeza y fue interpolado entre jornadas vecinas (marcadas con ≈ en los tooltips).
-  Ranking: puntos, con exactos como referencia de desempate.`;
+  Las posiciones salen del orden real de cada tabla.`;
 
 // ---------- render ----------
 function render(){
